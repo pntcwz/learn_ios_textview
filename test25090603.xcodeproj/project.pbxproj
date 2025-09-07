@@ -10,6 +10,10 @@
 		A9F5D58D2E6C601D00842915 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F5D58C2E6C601D00842915 /* AppDelegate.swift */; };
 		A9F5D58F2E6C601D00842915 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F5D58E2E6C601D00842915 /* SceneDelegate.swift */; };
 		A9F5D5912E6C601D00842915 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F5D5902E6C601D00842915 /* ViewController.swift */; };
+		A9F5D5A12E6C602000842915 /* SelectableTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F5D5A02E6C602000842915 /* SelectableTextViewController.swift */; };
+		A9F5D5A32E6C602100842915 /* AddressMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F5D5A22E6C602100842915 /* AddressMapViewController.swift */; };
+		A9F5D5A52E6C602200842915 /* WebLinksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F5D5A42E6C602200842915 /* WebLinksViewController.swift */; };
+		A9F5D5A72E6C602300842915 /* PhoneNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9F5D5A62E6C602300842915 /* PhoneNumberViewController.swift */; };
 		A9F5D5942E6C601D00842915 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9F5D5922E6C601D00842915 /* Main.storyboard */; };
 		A9F5D5962E6C601F00842915 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9F5D5952E6C601F00842915 /* Assets.xcassets */; };
 		A9F5D5992E6C601F00842915 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9F5D5972E6C601F00842915 /* LaunchScreen.storyboard */; };
@@ -20,6 +24,10 @@
 		A9F5D58C2E6C601D00842915 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9F5D58E2E6C601D00842915 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A9F5D5902E6C601D00842915 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A9F5D5A02E6C602000842915 /* SelectableTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableTextViewController.swift; sourceTree = "<group>"; };
+		A9F5D5A22E6C602100842915 /* AddressMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressMapViewController.swift; sourceTree = "<group>"; };
+		A9F5D5A42E6C602200842915 /* WebLinksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebLinksViewController.swift; sourceTree = "<group>"; };
+		A9F5D5A62E6C602300842915 /* PhoneNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberViewController.swift; sourceTree = "<group>"; };
 		A9F5D5932E6C601D00842915 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A9F5D5952E6C601F00842915 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A9F5D5982E6C601F00842915 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -59,6 +67,10 @@
 				A9F5D58C2E6C601D00842915 /* AppDelegate.swift */,
 				A9F5D58E2E6C601D00842915 /* SceneDelegate.swift */,
 				A9F5D5902E6C601D00842915 /* ViewController.swift */,
+				A9F5D5A02E6C602000842915 /* SelectableTextViewController.swift */,
+				A9F5D5A22E6C602100842915 /* AddressMapViewController.swift */,
+				A9F5D5A42E6C602200842915 /* WebLinksViewController.swift */,
+				A9F5D5A62E6C602300842915 /* PhoneNumberViewController.swift */,
 				A9F5D5922E6C601D00842915 /* Main.storyboard */,
 				A9F5D5952E6C601F00842915 /* Assets.xcassets */,
 				A9F5D5972E6C601F00842915 /* LaunchScreen.storyboard */,
@@ -139,6 +151,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9F5D5912E6C601D00842915 /* ViewController.swift in Sources */,
+				A9F5D5A12E6C602000842915 /* SelectableTextViewController.swift in Sources */,
+				A9F5D5A32E6C602100842915 /* AddressMapViewController.swift in Sources */,
+				A9F5D5A52E6C602200842915 /* WebLinksViewController.swift in Sources */,
+				A9F5D5A72E6C602300842915 /* PhoneNumberViewController.swift in Sources */,
 				A9F5D58D2E6C601D00842915 /* AppDelegate.swift in Sources */,
 				A9F5D58F2E6C601D00842915 /* SceneDelegate.swift in Sources */,
 			);

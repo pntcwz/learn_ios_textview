@@ -11,9 +11,13 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        title = "TextView 教學示範"
+        setupNavigationBar()
     }
-
-
+    
+    private func setupNavigationBar() {
+        // 設定導航列樣式
+        navigationController?.navigationBar.prefersLargeTitles = true
+    }
 }
 

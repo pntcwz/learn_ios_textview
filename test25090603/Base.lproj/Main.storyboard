@@ -1,24 +1,301 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nav-controller">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--TextView 教學示範-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="test25090603" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="main-stack">
+                                <rect key="frame" x="50" y="260" width="293" height="332"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TextView 功能展示" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="title-label">
+                                        <rect key="frame" x="0.0" y="0.0" width="293" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="selectable-button">
+                                        <rect key="frame" x="0.0" y="66" width="293" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="selectable-button-height"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="選取文字功能">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="selectable-vc" kind="show" id="to-selectable"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="address-button">
+                                        <rect key="frame" x="0.0" y="140" width="293" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="address-button-height"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="地址地圖功能">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="address-vc" kind="show" id="to-address"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="web-button">
+                                        <rect key="frame" x="0.0" y="214" width="293" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="web-button-height"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="網址連結功能" titleAlignment="center">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="web-vc" kind="show" id="to-web"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="phone-button">
+                                        <rect key="frame" x="0.0" y="288" width="293" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="phone-button-height"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="電話號碼功能">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <segue destination="phone-vc" kind="show" id="to-phone"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="main-stack" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="main-stack-center-y"/>
+                            <constraint firstItem="main-stack" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="main-stack-leading"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="main-stack" secondAttribute="trailing" constant="50" id="main-stack-trailing"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="TextView 教學示範" id="main-nav-item"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1056.4885496183206" y="3.5211267605633805"/>
+        </scene>
+        <!--選取文字-->
+        <scene sceneID="selectable-scene">
+            <objects>
+                <viewController id="selectable-vc" customClass="SelectableTextViewController" customModule="test25090603" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="selectable-view">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="selectable-textview">
+                                <rect key="frame" x="20" y="123" width="353" height="675"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">作者：劉禹錫
+作品：烏衣巷
+
+朱雀橋邊野草花，
+烏衣巷口夕陽斜。
+舊時王謝堂前燕，
+飛入尋常百姓家。</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="selectable-safe-area"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="selectable-safe-area" firstAttribute="bottom" secondItem="selectable-textview" secondAttribute="bottom" constant="20" id="selectable-textview-bottom"/>
+                            <constraint firstItem="selectable-textview" firstAttribute="leading" secondItem="selectable-safe-area" secondAttribute="leading" constant="20" id="selectable-textview-leading"/>
+                            <constraint firstItem="selectable-textview" firstAttribute="top" secondItem="selectable-safe-area" secondAttribute="top" constant="20" id="selectable-textview-top"/>
+                            <constraint firstItem="selectable-safe-area" firstAttribute="trailing" secondItem="selectable-textview" secondAttribute="trailing" constant="20" id="selectable-textview-trailing"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="選取文字" id="selectable-nav-item"/>
+                    <connections>
+                        <outlet property="textView" destination="selectable-textview" id="selectable-textview-outlet"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="selectable-first-responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1824" y="-1156"/>
+        </scene>
+        <!--地址地圖-->
+        <scene sceneID="address-scene">
+            <objects>
+                <viewController id="address-vc" customClass="AddressMapViewController" customModule="test25090603" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="address-view">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="address-textview">
+                                <rect key="frame" x="20" y="123" width="353" height="675"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">點擊下方地址開啟地圖：
+
+台北101
+台北市信義區信義路五段7號
+
+國立故宮博物院
+台北市士林區至善路二段221號
+
+中正紀念堂
+台北市中正區中山南路21號</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" address="YES"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="address-safe-area"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="address-safe-area" firstAttribute="bottom" secondItem="address-textview" secondAttribute="bottom" constant="20" id="address-textview-bottom"/>
+                            <constraint firstItem="address-textview" firstAttribute="leading" secondItem="address-safe-area" secondAttribute="leading" constant="20" id="address-textview-leading"/>
+                            <constraint firstItem="address-textview" firstAttribute="top" secondItem="address-safe-area" secondAttribute="top" constant="20" id="address-textview-top"/>
+                            <constraint firstItem="address-safe-area" firstAttribute="trailing" secondItem="address-textview" secondAttribute="trailing" constant="20" id="address-textview-trailing"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="地址地圖" id="address-nav-item"/>
+                    <connections>
+                        <outlet property="textView" destination="address-textview" id="address-textview-outlet"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="address-first-responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1824" y="-454"/>
+        </scene>
+        <!--網址連結-->
+        <scene sceneID="web-scene">
+            <objects>
+                <viewController id="web-vc" customClass="WebLinksViewController" customModule="test25090603" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="web-view">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="web-textview">
+                                <rect key="frame" x="20" y="123" width="353" height="675"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">點擊下方連結開啟外部瀏覽器：
+
+Apple 官方網站
+https://www.apple.com
+
+Google 搜尋引擎  
+https://www.google.com
+
+Yahoo 入口網站
+https://www.yahoo.com</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="web-safe-area"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="web-safe-area" firstAttribute="bottom" secondItem="web-textview" secondAttribute="bottom" constant="20" id="web-textview-bottom"/>
+                            <constraint firstItem="web-textview" firstAttribute="leading" secondItem="web-safe-area" secondAttribute="leading" constant="20" id="web-textview-leading"/>
+                            <constraint firstItem="web-textview" firstAttribute="top" secondItem="web-safe-area" secondAttribute="top" constant="20" id="web-textview-top"/>
+                            <constraint firstItem="web-safe-area" firstAttribute="trailing" secondItem="web-textview" secondAttribute="trailing" constant="20" id="web-textview-trailing"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="網址連結" id="web-nav-item"/>
+                    <connections>
+                        <outlet property="textView" destination="web-textview" id="web-textview-outlet"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="web-first-responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1871" y="1046"/>
+        </scene>
+        <!--電話號碼-->
+        <scene sceneID="phone-scene">
+            <objects>
+                <viewController id="phone-vc" customClass="PhoneNumberViewController" customModule="test25090603" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="phone-view">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="phone-textview">
+                                <rect key="frame" x="20" y="123" width="353" height="675"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">點擊下方電話號碼撥打電話：
+
+銀行客服專線
+
+國泰世華銀行
+客服專線：0800-818-008
+
+中國信託銀行
+客服專線：0800-001-234
+
+玉山銀行
+客服專線：02-2182-1313</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="phone-safe-area"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="phone-safe-area" firstAttribute="bottom" secondItem="phone-textview" secondAttribute="bottom" constant="20" id="phone-textview-bottom"/>
+                            <constraint firstItem="phone-textview" firstAttribute="leading" secondItem="phone-safe-area" secondAttribute="leading" constant="20" id="phone-textview-leading"/>
+                            <constraint firstItem="phone-textview" firstAttribute="top" secondItem="phone-safe-area" secondAttribute="top" constant="20" id="phone-textview-top"/>
+                            <constraint firstItem="phone-safe-area" firstAttribute="trailing" secondItem="phone-textview" secondAttribute="trailing" constant="20" id="phone-textview-trailing"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="電話號碼" id="phone-nav-item"/>
+                    <connections>
+                        <outlet property="textView" destination="phone-textview" id="phone-textview-outlet"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="phone-first-responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1871" y="311"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nav-scene">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nav-controller" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nav-bar">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="nav-root-segue"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nav-first-responder" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="129.7709923664122" y="3.5211267605633805"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
